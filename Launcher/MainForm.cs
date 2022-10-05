@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Launcher.Properties;
 using System.IO;
 using Sunny.UI;
+using System.Runtime.InteropServices;
 
 namespace Launcher
 {
@@ -21,6 +22,8 @@ namespace Launcher
         public static Process GameProgress;
         public static MainForm CurrentForm;
         public static Dictionary<string, IPEndPoint> IPList;
+        public string GameDirectory = Directory.GetCurrentDirectory();
+
         public bool Is64Bit
         {
             get
@@ -38,7 +41,13 @@ namespace Launcher
         public MainForm()
         {
             InitializeComponent();
+
+            bool GameCfgFound = File.Exists("./GameCfg.txt");
+            if (GameCfgFound)
+                GameDirectory = File.ReadAllText("./GameCfg.txt").Trim('\r', '\n', '\t', ' ');
+
             PreLaunchChecks();
+
             CurrentForm = this;
             Network.MainSocket();
             IPList = new Dictionary<string, IPEndPoint>();
@@ -47,8 +56,8 @@ namespace Launcher
         }
         public void PreLaunchChecks()
         {
-            bool ClientFound32Bit = File.Exists(".\\Binaries\\Win32\\MMOGame-Win32-Shipping.exe");
-            bool ClientFound64Bit = File.Exists(".\\Binaries\\Win64\\MMOGame-Win64-Shipping.exe");
+            bool ClientFound32Bit = File.Exists(Path.Combine(GameDirectory, ".\\Binaries\\Win32\\MMOGame-Win32-Shipping.exe"));
+            bool ClientFound64Bit = File.Exists(Path.Combine(GameDirectory, ".\\Binaries\\Win64\\MMOGame-Win64-Shipping.exe"));
             bool ServerCfgFound = File.Exists("./ServerCfg.txt");
             if (!ClientFound32Bit && !ClientFound64Bit)
             {
@@ -131,6 +140,8 @@ namespace Launcher
                         Settings.Default.SaveArea = start_selected_zone.Text;
                         Settings.Default.Save();
                         GameProgress = new Process();
+                        GameProgress.StartInfo.WorkingDirectory = GameDirectory;
+                        GameProgress.StartInfo.UseShellExecute = true;
 
                         if (Is32Bit && Is64Bit || !Is32Bit && !Is64Bit)
                         {
@@ -506,6 +517,40 @@ namespace Launcher
         private void uiCheckBox2_CheckedChanged(object sender, EventArgs e)
         {
             uiCheckBox1.Checked = !uiCheckBox2.Checked;
+        }
+
+        [DllImport("user32.dll")]//拖动无窗体的控件
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        public const int WM_SYSCOMMAND = 0x0112;
+        public const int SC_MOVE = 0xF010;
+        public const int HTCAPTION = 0x0002;
+
+        private void AccountLoginTab_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+        }
+
+        private void ChangePasswordTab_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+        }
+
+        private void RegistrationTab_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+        }
+
+        private void StartGameTab_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
     }
 }

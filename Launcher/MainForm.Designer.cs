@@ -94,7 +94,7 @@ namespace Launcher
             this.MainTab.Name = "MainTab";
             this.MainTab.Padding = new System.Drawing.Point(0, 0);
             this.MainTab.SelectedIndex = 0;
-            this.MainTab.Size = new System.Drawing.Size(600, 430);
+            this.MainTab.Size = new System.Drawing.Size(600, 487);
             this.MainTab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.MainTab.Style = Sunny.UI.UIStyle.Custom;
             this.MainTab.StyleCustomMode = true;
@@ -114,7 +114,7 @@ namespace Launcher
             // 
             this.AccountLoginTab.BackColor = System.Drawing.Color.Transparent;
             this.AccountLoginTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AccountLoginTab.BackgroundImage")));
-            this.AccountLoginTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccountLoginTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AccountLoginTab.Controls.Add(this.pictureBox2);
             this.AccountLoginTab.Controls.Add(this.pictureBox1);
             this.AccountLoginTab.Controls.Add(this.LoginAccountLabel);
@@ -126,16 +126,17 @@ namespace Launcher
             this.AccountLoginTab.Location = new System.Drawing.Point(0, 15);
             this.AccountLoginTab.Margin = new System.Windows.Forms.Padding(0);
             this.AccountLoginTab.Name = "AccountLoginTab";
-            this.AccountLoginTab.Size = new System.Drawing.Size(600, 415);
+            this.AccountLoginTab.Size = new System.Drawing.Size(600, 472);
             this.AccountLoginTab.TabIndex = 0;
             this.AccountLoginTab.Text = "Login";
+            this.AccountLoginTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AccountLoginTab_MouseDown);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(553, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(553, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 25);
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -143,9 +144,9 @@ namespace Launcher
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(127, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(384, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -153,6 +154,7 @@ namespace Launcher
             // LoginAccountLabel
             // 
             this.LoginAccountLabel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginAccountLabel.BackgroundImage")));
+            this.LoginAccountLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginAccountLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginAccountLabel.FillColor = System.Drawing.Color.Transparent;
             this.LoginAccountLabel.FillColor2 = System.Drawing.Color.Transparent;
@@ -162,7 +164,7 @@ namespace Launcher
             this.LoginAccountLabel.FillSelectedColor = System.Drawing.Color.Transparent;
             this.LoginAccountLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginAccountLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.LoginAccountLabel.Location = new System.Drawing.Point(120, 290);
+            this.LoginAccountLabel.Location = new System.Drawing.Point(120, 329);
             this.LoginAccountLabel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.LoginAccountLabel.MinimumSize = new System.Drawing.Size(1, 1);
             this.LoginAccountLabel.Name = "LoginAccountLabel";
@@ -170,7 +172,7 @@ namespace Launcher
             this.LoginAccountLabel.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.LoginAccountLabel.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.LoginAccountLabel.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LoginAccountLabel.Size = new System.Drawing.Size(391, 36);
+            this.LoginAccountLabel.Size = new System.Drawing.Size(391, 41);
             this.LoginAccountLabel.Style = Sunny.UI.UIStyle.Custom;
             this.LoginAccountLabel.Symbol = 0;
             this.LoginAccountLabel.SymbolHoverColor = System.Drawing.Color.DodgerBlue;
@@ -187,10 +189,10 @@ namespace Launcher
             this.ForgotPasswordLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForgotPasswordLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.ForgotPasswordLabel.LinkColor = System.Drawing.Color.LightSkyBlue;
-            this.ForgotPasswordLabel.Location = new System.Drawing.Point(250, 265);
+            this.ForgotPasswordLabel.Location = new System.Drawing.Point(250, 300);
             this.ForgotPasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ForgotPasswordLabel.Name = "ForgotPasswordLabel";
-            this.ForgotPasswordLabel.Size = new System.Drawing.Size(134, 23);
+            this.ForgotPasswordLabel.Size = new System.Drawing.Size(134, 26);
             this.ForgotPasswordLabel.Style = Sunny.UI.UIStyle.Custom;
             this.ForgotPasswordLabel.TabIndex = 16;
             this.ForgotPasswordLabel.TabStop = true;
@@ -213,16 +215,16 @@ namespace Launcher
             this.AccountPasswordTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.AccountPasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AccountPasswordTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.AccountPasswordTextBox.Location = new System.Drawing.Point(120, 205);
-            this.AccountPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AccountPasswordTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.AccountPasswordTextBox.Location = new System.Drawing.Point(120, 232);
+            this.AccountPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AccountPasswordTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.AccountPasswordTextBox.Name = "AccountPasswordTextBox";
             this.AccountPasswordTextBox.PasswordChar = '*';
             this.AccountPasswordTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.AccountPasswordTextBox.ScrollBarBackColor = System.Drawing.Color.Transparent;
             this.AccountPasswordTextBox.ScrollBarColor = System.Drawing.Color.Transparent;
             this.AccountPasswordTextBox.ShowText = false;
-            this.AccountPasswordTextBox.Size = new System.Drawing.Size(391, 36);
+            this.AccountPasswordTextBox.Size = new System.Drawing.Size(391, 41);
             this.AccountPasswordTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.AccountPasswordTextBox.Symbol = 61475;
             this.AccountPasswordTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -238,6 +240,7 @@ namespace Launcher
             // RegisterAccountLabel
             // 
             this.RegisterAccountLabel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegisterAccountLabel.BackgroundImage")));
+            this.RegisterAccountLabel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegisterAccountLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegisterAccountLabel.FillColor = System.Drawing.Color.Transparent;
             this.RegisterAccountLabel.FillColor2 = System.Drawing.Color.Transparent;
@@ -246,7 +249,7 @@ namespace Launcher
             this.RegisterAccountLabel.FillSelectedColor = System.Drawing.Color.Transparent;
             this.RegisterAccountLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegisterAccountLabel.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.RegisterAccountLabel.Location = new System.Drawing.Point(120, 330);
+            this.RegisterAccountLabel.Location = new System.Drawing.Point(120, 374);
             this.RegisterAccountLabel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.RegisterAccountLabel.MinimumSize = new System.Drawing.Size(1, 1);
             this.RegisterAccountLabel.Name = "RegisterAccountLabel";
@@ -254,7 +257,7 @@ namespace Launcher
             this.RegisterAccountLabel.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.RegisterAccountLabel.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.RegisterAccountLabel.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RegisterAccountLabel.Size = new System.Drawing.Size(391, 36);
+            this.RegisterAccountLabel.Size = new System.Drawing.Size(391, 41);
             this.RegisterAccountLabel.Style = Sunny.UI.UIStyle.Custom;
             this.RegisterAccountLabel.Symbol = 0;
             this.RegisterAccountLabel.SymbolHoverColor = System.Drawing.Color.DodgerBlue;
@@ -270,10 +273,10 @@ namespace Launcher
             // 
             this.login_error_label.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.login_error_label.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.login_error_label.Location = new System.Drawing.Point(120, 245);
+            this.login_error_label.Location = new System.Drawing.Point(120, 278);
             this.login_error_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.login_error_label.Name = "login_error_label";
-            this.login_error_label.Size = new System.Drawing.Size(391, 20);
+            this.login_error_label.Size = new System.Drawing.Size(391, 23);
             this.login_error_label.Style = Sunny.UI.UIStyle.Custom;
             this.login_error_label.TabIndex = 15;
             this.login_error_label.Text = "Error message";
@@ -297,9 +300,9 @@ namespace Launcher
             this.AccountTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.AccountTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AccountTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.AccountTextBox.Location = new System.Drawing.Point(120, 159);
-            this.AccountTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AccountTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.AccountTextBox.Location = new System.Drawing.Point(120, 180);
+            this.AccountTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AccountTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.AccountTextBox.Name = "AccountTextBox";
             this.AccountTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.AccountTextBox.RectDisableColor = System.Drawing.Color.White;
@@ -307,7 +310,7 @@ namespace Launcher
             this.AccountTextBox.ScrollBarBackColor = System.Drawing.Color.Transparent;
             this.AccountTextBox.ScrollBarColor = System.Drawing.Color.Transparent;
             this.AccountTextBox.ShowText = false;
-            this.AccountTextBox.Size = new System.Drawing.Size(391, 36);
+            this.AccountTextBox.Size = new System.Drawing.Size(391, 41);
             this.AccountTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.AccountTextBox.Symbol = 61447;
             this.AccountTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -323,7 +326,7 @@ namespace Launcher
             // 
             this.RegistrationTab.BackColor = System.Drawing.Color.Transparent;
             this.RegistrationTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrationTab.BackgroundImage")));
-            this.RegistrationTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RegistrationTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrationTab.Controls.Add(this.pictureBox3);
             this.RegistrationTab.Controls.Add(this.Register_Back_To_LoginBtn);
             this.RegistrationTab.Controls.Add(this.RegistrationErrorLabel);
@@ -335,16 +338,17 @@ namespace Launcher
             this.RegistrationTab.Location = new System.Drawing.Point(0, 15);
             this.RegistrationTab.Margin = new System.Windows.Forms.Padding(0);
             this.RegistrationTab.Name = "RegistrationTab";
-            this.RegistrationTab.Size = new System.Drawing.Size(200, 85);
+            this.RegistrationTab.Size = new System.Drawing.Size(600, 472);
             this.RegistrationTab.TabIndex = 1;
             this.RegistrationTab.Text = "Create Account";
+            this.RegistrationTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegistrationTab_MouseDown);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(553, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(553, 26);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(22, 25);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
@@ -352,6 +356,7 @@ namespace Launcher
             // Register_Back_To_LoginBtn
             // 
             this.Register_Back_To_LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Register_Back_To_LoginBtn.BackgroundImage")));
+            this.Register_Back_To_LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Register_Back_To_LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Register_Back_To_LoginBtn.FillColor = System.Drawing.Color.Transparent;
             this.Register_Back_To_LoginBtn.FillColor2 = System.Drawing.Color.Transparent;
@@ -360,7 +365,7 @@ namespace Launcher
             this.Register_Back_To_LoginBtn.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Register_Back_To_LoginBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_Back_To_LoginBtn.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.Register_Back_To_LoginBtn.Location = new System.Drawing.Point(120, 330);
+            this.Register_Back_To_LoginBtn.Location = new System.Drawing.Point(120, 374);
             this.Register_Back_To_LoginBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Register_Back_To_LoginBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.Register_Back_To_LoginBtn.Name = "Register_Back_To_LoginBtn";
@@ -368,7 +373,7 @@ namespace Launcher
             this.Register_Back_To_LoginBtn.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.Register_Back_To_LoginBtn.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.Register_Back_To_LoginBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Register_Back_To_LoginBtn.Size = new System.Drawing.Size(391, 36);
+            this.Register_Back_To_LoginBtn.Size = new System.Drawing.Size(391, 41);
             this.Register_Back_To_LoginBtn.Style = Sunny.UI.UIStyle.Custom;
             this.Register_Back_To_LoginBtn.Symbol = 0;
             this.Register_Back_To_LoginBtn.SymbolHoverColor = System.Drawing.Color.DodgerBlue;
@@ -384,10 +389,10 @@ namespace Launcher
             // 
             this.RegistrationErrorLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegistrationErrorLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.RegistrationErrorLabel.Location = new System.Drawing.Point(120, 246);
+            this.RegistrationErrorLabel.Location = new System.Drawing.Point(120, 279);
             this.RegistrationErrorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RegistrationErrorLabel.Name = "RegistrationErrorLabel";
-            this.RegistrationErrorLabel.Size = new System.Drawing.Size(391, 20);
+            this.RegistrationErrorLabel.Size = new System.Drawing.Size(391, 23);
             this.RegistrationErrorLabel.Style = Sunny.UI.UIStyle.Custom;
             this.RegistrationErrorLabel.TabIndex = 17;
             this.RegistrationErrorLabel.Text = "Error message";
@@ -398,6 +403,7 @@ namespace Launcher
             // Register_AccountBtn
             // 
             this.Register_AccountBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Register_AccountBtn.BackgroundImage")));
+            this.Register_AccountBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Register_AccountBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Register_AccountBtn.FillColor = System.Drawing.Color.Transparent;
             this.Register_AccountBtn.FillColor2 = System.Drawing.Color.Transparent;
@@ -407,7 +413,7 @@ namespace Launcher
             this.Register_AccountBtn.FillSelectedColor = System.Drawing.Color.Transparent;
             this.Register_AccountBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_AccountBtn.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.Register_AccountBtn.Location = new System.Drawing.Point(120, 290);
+            this.Register_AccountBtn.Location = new System.Drawing.Point(120, 329);
             this.Register_AccountBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Register_AccountBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.Register_AccountBtn.Name = "Register_AccountBtn";
@@ -415,7 +421,7 @@ namespace Launcher
             this.Register_AccountBtn.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.Register_AccountBtn.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.Register_AccountBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Register_AccountBtn.Size = new System.Drawing.Size(391, 36);
+            this.Register_AccountBtn.Size = new System.Drawing.Size(391, 41);
             this.Register_AccountBtn.Style = Sunny.UI.UIStyle.Custom;
             this.Register_AccountBtn.Symbol = 0;
             this.Register_AccountBtn.SymbolHoverColor = System.Drawing.Color.DodgerBlue;
@@ -441,15 +447,15 @@ namespace Launcher
             this.Register_SecretAnswerTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Register_SecretAnswerTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_SecretAnswerTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Register_SecretAnswerTextBox.Location = new System.Drawing.Point(120, 205);
-            this.Register_SecretAnswerTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Register_SecretAnswerTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Register_SecretAnswerTextBox.Location = new System.Drawing.Point(120, 232);
+            this.Register_SecretAnswerTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Register_SecretAnswerTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Register_SecretAnswerTextBox.Name = "Register_SecretAnswerTextBox";
             this.Register_SecretAnswerTextBox.PasswordChar = '*';
             this.Register_SecretAnswerTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Register_SecretAnswerTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Register_SecretAnswerTextBox.ShowText = false;
-            this.Register_SecretAnswerTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Register_SecretAnswerTextBox.Size = new System.Drawing.Size(391, 41);
             this.Register_SecretAnswerTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Register_SecretAnswerTextBox.Symbol = 61530;
             this.Register_SecretAnswerTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -474,15 +480,15 @@ namespace Launcher
             this.Register_PasswordTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Register_PasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_PasswordTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Register_PasswordTextBox.Location = new System.Drawing.Point(120, 113);
-            this.Register_PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Register_PasswordTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Register_PasswordTextBox.Location = new System.Drawing.Point(120, 128);
+            this.Register_PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Register_PasswordTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Register_PasswordTextBox.Name = "Register_PasswordTextBox";
             this.Register_PasswordTextBox.PasswordChar = '*';
             this.Register_PasswordTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Register_PasswordTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Register_PasswordTextBox.ShowText = false;
-            this.Register_PasswordTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Register_PasswordTextBox.Size = new System.Drawing.Size(391, 41);
             this.Register_PasswordTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Register_PasswordTextBox.Symbol = 61475;
             this.Register_PasswordTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -507,14 +513,14 @@ namespace Launcher
             this.Register_QuestionTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Register_QuestionTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_QuestionTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Register_QuestionTextBox.Location = new System.Drawing.Point(120, 159);
-            this.Register_QuestionTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Register_QuestionTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Register_QuestionTextBox.Location = new System.Drawing.Point(120, 180);
+            this.Register_QuestionTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Register_QuestionTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Register_QuestionTextBox.Name = "Register_QuestionTextBox";
             this.Register_QuestionTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Register_QuestionTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Register_QuestionTextBox.ShowText = false;
-            this.Register_QuestionTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Register_QuestionTextBox.Size = new System.Drawing.Size(391, 41);
             this.Register_QuestionTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Register_QuestionTextBox.Symbol = 61530;
             this.Register_QuestionTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -539,14 +545,14 @@ namespace Launcher
             this.Register_AccountNameTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Register_AccountNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Register_AccountNameTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Register_AccountNameTextBox.Location = new System.Drawing.Point(120, 67);
-            this.Register_AccountNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Register_AccountNameTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Register_AccountNameTextBox.Location = new System.Drawing.Point(120, 76);
+            this.Register_AccountNameTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Register_AccountNameTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Register_AccountNameTextBox.Name = "Register_AccountNameTextBox";
             this.Register_AccountNameTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Register_AccountNameTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Register_AccountNameTextBox.ShowText = false;
-            this.Register_AccountNameTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Register_AccountNameTextBox.Size = new System.Drawing.Size(391, 41);
             this.Register_AccountNameTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Register_AccountNameTextBox.Symbol = 61447;
             this.Register_AccountNameTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -562,7 +568,7 @@ namespace Launcher
             // 
             this.ChangePasswordTab.BackColor = System.Drawing.Color.Transparent;
             this.ChangePasswordTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChangePasswordTab.BackgroundImage")));
-            this.ChangePasswordTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ChangePasswordTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ChangePasswordTab.Controls.Add(this.pictureBox4);
             this.ChangePasswordTab.Controls.Add(this.Modify_Back_To_LoginBtn);
             this.ChangePasswordTab.Controls.Add(this.Modify_ErrorLabel);
@@ -574,16 +580,17 @@ namespace Launcher
             this.ChangePasswordTab.Location = new System.Drawing.Point(0, 15);
             this.ChangePasswordTab.Margin = new System.Windows.Forms.Padding(0);
             this.ChangePasswordTab.Name = "ChangePasswordTab";
-            this.ChangePasswordTab.Size = new System.Drawing.Size(200, 85);
+            this.ChangePasswordTab.Size = new System.Drawing.Size(600, 472);
             this.ChangePasswordTab.TabIndex = 2;
             this.ChangePasswordTab.Text = "Change Password";
+            this.ChangePasswordTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChangePasswordTab_MouseDown);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(553, 23);
+            this.pictureBox4.Location = new System.Drawing.Point(553, 26);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox4.Size = new System.Drawing.Size(22, 25);
             this.pictureBox4.TabIndex = 25;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -591,6 +598,7 @@ namespace Launcher
             // Modify_Back_To_LoginBtn
             // 
             this.Modify_Back_To_LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Modify_Back_To_LoginBtn.BackgroundImage")));
+            this.Modify_Back_To_LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Modify_Back_To_LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Modify_Back_To_LoginBtn.FillColor = System.Drawing.Color.Transparent;
             this.Modify_Back_To_LoginBtn.FillColor2 = System.Drawing.Color.Transparent;
@@ -600,7 +608,7 @@ namespace Launcher
             this.Modify_Back_To_LoginBtn.FillSelectedColor = System.Drawing.Color.Transparent;
             this.Modify_Back_To_LoginBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_Back_To_LoginBtn.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.Modify_Back_To_LoginBtn.Location = new System.Drawing.Point(120, 330);
+            this.Modify_Back_To_LoginBtn.Location = new System.Drawing.Point(120, 374);
             this.Modify_Back_To_LoginBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Modify_Back_To_LoginBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.Modify_Back_To_LoginBtn.Name = "Modify_Back_To_LoginBtn";
@@ -608,7 +616,7 @@ namespace Launcher
             this.Modify_Back_To_LoginBtn.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_Back_To_LoginBtn.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.Modify_Back_To_LoginBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Modify_Back_To_LoginBtn.Size = new System.Drawing.Size(391, 36);
+            this.Modify_Back_To_LoginBtn.Size = new System.Drawing.Size(391, 41);
             this.Modify_Back_To_LoginBtn.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_Back_To_LoginBtn.Symbol = 0;
             this.Modify_Back_To_LoginBtn.TabIndex = 24;
@@ -623,10 +631,10 @@ namespace Launcher
             // 
             this.Modify_ErrorLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_ErrorLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Modify_ErrorLabel.Location = new System.Drawing.Point(120, 246);
+            this.Modify_ErrorLabel.Location = new System.Drawing.Point(120, 279);
             this.Modify_ErrorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Modify_ErrorLabel.Name = "Modify_ErrorLabel";
-            this.Modify_ErrorLabel.Size = new System.Drawing.Size(391, 20);
+            this.Modify_ErrorLabel.Size = new System.Drawing.Size(391, 23);
             this.Modify_ErrorLabel.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_ErrorLabel.TabIndex = 22;
             this.Modify_ErrorLabel.Text = "Error message";
@@ -637,6 +645,7 @@ namespace Launcher
             // Modify_PasswordBtn
             // 
             this.Modify_PasswordBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Modify_PasswordBtn.BackgroundImage")));
+            this.Modify_PasswordBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Modify_PasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Modify_PasswordBtn.FillColor = System.Drawing.Color.Transparent;
             this.Modify_PasswordBtn.FillColor2 = System.Drawing.Color.Transparent;
@@ -646,7 +655,7 @@ namespace Launcher
             this.Modify_PasswordBtn.FillSelectedColor = System.Drawing.Color.Transparent;
             this.Modify_PasswordBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_PasswordBtn.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.Modify_PasswordBtn.Location = new System.Drawing.Point(120, 290);
+            this.Modify_PasswordBtn.Location = new System.Drawing.Point(120, 329);
             this.Modify_PasswordBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Modify_PasswordBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.Modify_PasswordBtn.Name = "Modify_PasswordBtn";
@@ -654,7 +663,7 @@ namespace Launcher
             this.Modify_PasswordBtn.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_PasswordBtn.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.Modify_PasswordBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Modify_PasswordBtn.Size = new System.Drawing.Size(391, 36);
+            this.Modify_PasswordBtn.Size = new System.Drawing.Size(391, 41);
             this.Modify_PasswordBtn.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_PasswordBtn.Symbol = 0;
             this.Modify_PasswordBtn.TabIndex = 21;
@@ -678,15 +687,15 @@ namespace Launcher
             this.Modify_AnswerTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Modify_AnswerTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_AnswerTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Modify_AnswerTextBox.Location = new System.Drawing.Point(120, 205);
-            this.Modify_AnswerTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Modify_AnswerTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Modify_AnswerTextBox.Location = new System.Drawing.Point(120, 232);
+            this.Modify_AnswerTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Modify_AnswerTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Modify_AnswerTextBox.Name = "Modify_AnswerTextBox";
             this.Modify_AnswerTextBox.PasswordChar = '*';
             this.Modify_AnswerTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_AnswerTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Modify_AnswerTextBox.ShowText = false;
-            this.Modify_AnswerTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Modify_AnswerTextBox.Size = new System.Drawing.Size(391, 41);
             this.Modify_AnswerTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_AnswerTextBox.Symbol = 61530;
             this.Modify_AnswerTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -711,15 +720,15 @@ namespace Launcher
             this.Modify_PasswordTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Modify_PasswordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_PasswordTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Modify_PasswordTextBox.Location = new System.Drawing.Point(120, 113);
-            this.Modify_PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Modify_PasswordTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Modify_PasswordTextBox.Location = new System.Drawing.Point(120, 128);
+            this.Modify_PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Modify_PasswordTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Modify_PasswordTextBox.Name = "Modify_PasswordTextBox";
             this.Modify_PasswordTextBox.PasswordChar = '*';
             this.Modify_PasswordTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_PasswordTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Modify_PasswordTextBox.ShowText = false;
-            this.Modify_PasswordTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Modify_PasswordTextBox.Size = new System.Drawing.Size(391, 41);
             this.Modify_PasswordTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_PasswordTextBox.Symbol = 61475;
             this.Modify_PasswordTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -744,14 +753,14 @@ namespace Launcher
             this.Modify_QuestionTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Modify_QuestionTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_QuestionTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Modify_QuestionTextBox.Location = new System.Drawing.Point(120, 159);
-            this.Modify_QuestionTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Modify_QuestionTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Modify_QuestionTextBox.Location = new System.Drawing.Point(120, 180);
+            this.Modify_QuestionTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Modify_QuestionTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Modify_QuestionTextBox.Name = "Modify_QuestionTextBox";
             this.Modify_QuestionTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_QuestionTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Modify_QuestionTextBox.ShowText = false;
-            this.Modify_QuestionTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Modify_QuestionTextBox.Size = new System.Drawing.Size(391, 41);
             this.Modify_QuestionTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_QuestionTextBox.Symbol = 61530;
             this.Modify_QuestionTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -776,14 +785,14 @@ namespace Launcher
             this.Modify_AccountNameTextBox.FillColor2 = System.Drawing.Color.Transparent;
             this.Modify_AccountNameTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Modify_AccountNameTextBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Modify_AccountNameTextBox.Location = new System.Drawing.Point(120, 67);
-            this.Modify_AccountNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Modify_AccountNameTextBox.MinimumSize = new System.Drawing.Size(1, 14);
+            this.Modify_AccountNameTextBox.Location = new System.Drawing.Point(120, 76);
+            this.Modify_AccountNameTextBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Modify_AccountNameTextBox.MinimumSize = new System.Drawing.Size(1, 16);
             this.Modify_AccountNameTextBox.Name = "Modify_AccountNameTextBox";
             this.Modify_AccountNameTextBox.RectColor = System.Drawing.Color.LightSkyBlue;
             this.Modify_AccountNameTextBox.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Modify_AccountNameTextBox.ShowText = false;
-            this.Modify_AccountNameTextBox.Size = new System.Drawing.Size(391, 36);
+            this.Modify_AccountNameTextBox.Size = new System.Drawing.Size(391, 41);
             this.Modify_AccountNameTextBox.Style = Sunny.UI.UIStyle.Custom;
             this.Modify_AccountNameTextBox.Symbol = 61447;
             this.Modify_AccountNameTextBox.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -799,7 +808,7 @@ namespace Launcher
             // 
             this.StartGameTab.BackColor = System.Drawing.Color.Transparent;
             this.StartGameTab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StartGameTab.BackgroundImage")));
-            this.StartGameTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.StartGameTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.StartGameTab.Controls.Add(this.uiCheckBox2);
             this.StartGameTab.Controls.Add(this.uiCheckBox1);
             this.StartGameTab.Controls.Add(this.label1);
@@ -811,19 +820,20 @@ namespace Launcher
             this.StartGameTab.Location = new System.Drawing.Point(0, 15);
             this.StartGameTab.Margin = new System.Windows.Forms.Padding(0);
             this.StartGameTab.Name = "StartGameTab";
-            this.StartGameTab.Size = new System.Drawing.Size(200, 85);
+            this.StartGameTab.Size = new System.Drawing.Size(600, 472);
             this.StartGameTab.TabIndex = 3;
             this.StartGameTab.Text = "Start Game";
+            this.StartGameTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StartGameTab_MouseDown);
             // 
             // uiCheckBox2
             // 
-            this.uiCheckBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uiCheckBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiCheckBox2.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.uiCheckBox2.Location = new System.Drawing.Point(399, 296);
+            this.uiCheckBox2.Location = new System.Drawing.Point(399, 335);
             this.uiCheckBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiCheckBox2.Name = "uiCheckBox2";
             this.uiCheckBox2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.uiCheckBox2.Size = new System.Drawing.Size(150, 29);
+            this.uiCheckBox2.Size = new System.Drawing.Size(150, 33);
             this.uiCheckBox2.Style = Sunny.UI.UIStyle.Custom;
             this.uiCheckBox2.TabIndex = 29;
             this.uiCheckBox2.Text = "64Bit";
@@ -832,13 +842,13 @@ namespace Launcher
             // 
             // uiCheckBox1
             // 
-            this.uiCheckBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uiCheckBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiCheckBox1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.uiCheckBox1.Location = new System.Drawing.Point(399, 271);
+            this.uiCheckBox1.Location = new System.Drawing.Point(399, 307);
             this.uiCheckBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiCheckBox1.Name = "uiCheckBox1";
             this.uiCheckBox1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.uiCheckBox1.Size = new System.Drawing.Size(150, 29);
+            this.uiCheckBox1.Size = new System.Drawing.Size(150, 33);
             this.uiCheckBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiCheckBox1.TabIndex = 28;
             this.uiCheckBox1.Text = "32Bit";
@@ -850,7 +860,7 @@ namespace Launcher
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label1.Location = new System.Drawing.Point(270, 97);
+            this.label1.Location = new System.Drawing.Point(270, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 14);
             this.label1.TabIndex = 27;
@@ -859,10 +869,10 @@ namespace Launcher
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(553, 23);
+            this.pictureBox5.Location = new System.Drawing.Point(553, 26);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox5.Size = new System.Drawing.Size(22, 25);
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
@@ -883,7 +893,7 @@ namespace Launcher
             this.activate_account.ForeHoverColor = System.Drawing.Color.LightSkyBlue;
             this.activate_account.ForePressColor = System.Drawing.Color.LightSkyBlue;
             this.activate_account.ForeSelectedColor = System.Drawing.Color.LightSkyBlue;
-            this.activate_account.Location = new System.Drawing.Point(153, 60);
+            this.activate_account.Location = new System.Drawing.Point(153, 68);
             this.activate_account.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.activate_account.MinimumSize = new System.Drawing.Size(1, 1);
             this.activate_account.Name = "activate_account";
@@ -893,7 +903,7 @@ namespace Launcher
             this.activate_account.RectHoverColor = System.Drawing.Color.Transparent;
             this.activate_account.RectPressColor = System.Drawing.Color.Transparent;
             this.activate_account.RectSelectedColor = System.Drawing.Color.Transparent;
-            this.activate_account.Size = new System.Drawing.Size(295, 37);
+            this.activate_account.Size = new System.Drawing.Size(295, 42);
             this.activate_account.Style = Sunny.UI.UIStyle.Custom;
             this.activate_account.Symbol = 57607;
             this.activate_account.SymbolColor = System.Drawing.Color.LightSkyBlue;
@@ -915,10 +925,10 @@ namespace Launcher
             this.start_selected_zone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.start_selected_zone.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.start_selected_zone.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.start_selected_zone.Location = new System.Drawing.Point(411, 157);
+            this.start_selected_zone.Location = new System.Drawing.Point(411, 178);
             this.start_selected_zone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.start_selected_zone.Name = "start_selected_zone";
-            this.start_selected_zone.Size = new System.Drawing.Size(138, 31);
+            this.start_selected_zone.Size = new System.Drawing.Size(138, 35);
             this.start_selected_zone.Style = Sunny.UI.UIStyle.Custom;
             this.start_selected_zone.TabIndex = 7;
             this.start_selected_zone.TabStop = true;
@@ -932,17 +942,17 @@ namespace Launcher
             // 
             this.GameServerList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GameServerList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.GameServerList.Font = new System.Drawing.Font("Arial", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GameServerList.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GameServerList.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.GameServerList.FormattingEnabled = true;
-            this.GameServerList.ItemHeight = 20;
+            this.GameServerList.ItemHeight = 40;
             this.GameServerList.Items.AddRange(new object[] {
             "Dragon Server",
             "Phoenix Server"});
-            this.GameServerList.Location = new System.Drawing.Point(241, 113);
+            this.GameServerList.Location = new System.Drawing.Point(241, 128);
             this.GameServerList.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.GameServerList.Name = "GameServerList";
-            this.GameServerList.Size = new System.Drawing.Size(139, 213);
+            this.GameServerList.Size = new System.Drawing.Size(139, 241);
             this.GameServerList.TabIndex = 4;
             this.GameServerList.TabStop = false;
             this.GameServerList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.StartupChoosegameServer_DrawItem);
@@ -951,6 +961,7 @@ namespace Launcher
             // Launcher_enterGameBtn
             // 
             this.Launcher_enterGameBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Launcher_enterGameBtn.BackgroundImage")));
+            this.Launcher_enterGameBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Launcher_enterGameBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Launcher_enterGameBtn.FillColor = System.Drawing.Color.Transparent;
             this.Launcher_enterGameBtn.FillColor2 = System.Drawing.Color.Transparent;
@@ -961,7 +972,7 @@ namespace Launcher
             this.Launcher_enterGameBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Launcher_enterGameBtn.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.Launcher_enterGameBtn.ForeHoverColor = System.Drawing.Color.DodgerBlue;
-            this.Launcher_enterGameBtn.Location = new System.Drawing.Point(120, 330);
+            this.Launcher_enterGameBtn.Location = new System.Drawing.Point(120, 374);
             this.Launcher_enterGameBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Launcher_enterGameBtn.MinimumSize = new System.Drawing.Size(1, 1);
             this.Launcher_enterGameBtn.Name = "Launcher_enterGameBtn";
@@ -969,7 +980,7 @@ namespace Launcher
             this.Launcher_enterGameBtn.RectHoverColor = System.Drawing.Color.LightSkyBlue;
             this.Launcher_enterGameBtn.RectPressColor = System.Drawing.Color.DodgerBlue;
             this.Launcher_enterGameBtn.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(70)))), ((int)(((byte)(28)))));
-            this.Launcher_enterGameBtn.Size = new System.Drawing.Size(391, 36);
+            this.Launcher_enterGameBtn.Size = new System.Drawing.Size(391, 41);
             this.Launcher_enterGameBtn.Style = Sunny.UI.UIStyle.Custom;
             this.Launcher_enterGameBtn.TabIndex = 1;
             this.Launcher_enterGameBtn.TabStop = false;
@@ -1001,19 +1012,19 @@ namespace Launcher
             this.OpenToolStripMenuItem,
             this.QuitToolStripMenuItem});
             this.TrayRightClickMenu.Name = "TrayRightClickMenu";
-            this.TrayRightClickMenu.Size = new System.Drawing.Size(104, 48);
+            this.TrayRightClickMenu.Size = new System.Drawing.Size(109, 48);
             // 
             // OpenToolStripMenuItem
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.OpenToolStripMenuItem.Text = "Open";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.Tray_Restore);
             // 
             // QuitToolStripMenuItem
             // 
             this.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem";
-            this.QuitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.QuitToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.QuitToolStripMenuItem.Text = "Quit";
             this.QuitToolStripMenuItem.Click += new System.EventHandler(this.TrayCloseLauncher);
             // 
@@ -1024,11 +1035,11 @@ namespace Launcher
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 430);
+            this.ClientSize = new System.Drawing.Size(600, 487);
             this.Controls.Add(this.MainTab);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
